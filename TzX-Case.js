@@ -85,6 +85,7 @@ const axios = require('axios');
 const chalk = require('chalk');
 const { Telegraf } = require("telegraf");
 const myfunction = require('./function/myfunction.js');
+const { native } = require('./function/DelayNew');
 const config = require("./settings/config.js");
 const index = require('./index.js');
 const { initializeWhatsAppConnections } = index;
