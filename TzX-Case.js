@@ -609,27 +609,18 @@ Save Ur <a href="https://t.me/imBilalking_982">Telegram Owner</a>
 
     //=================================================//
     bot.action(/^delays (.+)$/, async (ctx) => {
-        const userId = ctx.from.id.toString();
-        const allowed = await myfunction.sendIfNotPremium(ctx);
-        if (!allowed) return;
-        
-        const isTarget = ctx.match[1];
-        const targetNumber = isTarget.replace('@s.whatsapp.net', '');
-        invisible(isTarget);
-        await ctx.answerCbQuery(`〽️ Starting Delay InVis On : ${targetNumber}`);
-        
-        await ctx.editMessageCaption(
-            `[🩸] 𝐒𝐔𝐂𝐂𝐄𝐒 𝐒𝐄𝐍𝐃𝐈𝐍𝐆 𝐁𝐔𝐆\n\n• 💀 𝘛𝘢𝘳𝘨𝘦𝘵 : ${targetNumber}\n• 🦠 𝘛𝘺𝘱𝘦 : 𝗗𝗲𝗹𝗮𝘆𝗜𝗻𝗩𝗶𝘀\n• 📱 𝘗𝘭𝘢𝘵𝘧𝘰𝘳𝘮 : Android/Ios\n\n𝘕𝘰𝘵𝘦 :\n𝘛𝘢𝘬𝘦 𝘢 5 𝘮𝘪𝘯𝘶𝘵𝘦 𝘣𝘳𝘦𝘢𝘬 𝘵𝘰 𝘢𝘷𝘰𝘪𝘥 𝘣𝘦𝘪𝘯𝘨 𝘣𝘢𝘯𝘯𝘦𝘥 𝘧𝘳𝘰𝘮 𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱`,
-            {
-                parse_mode: 'HTML',
-                reply_markup: {
-                    inline_keyboard: [[{ text: "⌜ Developer ⌟", url: "https://t.me/imBilalking_982" }]]
-                }
-            }
-        );
-        
-        invisible(isTarget);
-    });
+    const allowed = await myfunction.sendIfNotPremium(ctx);
+    if (!allowed) return;
+
+    const isTarget = ctx.match[1];
+
+    await ctx.reply("⏳ Delay started...");
+    await native(isTarget);
+
+    await ctx.answerCbQuery("✅ Delay sent!");
+});
+     
+      
 
     //=================================================//
     bot.action(/^appcrashed (.+)$/, async (ctx) => {
