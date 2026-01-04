@@ -86,8 +86,8 @@ function isPremium(userId) {
 //=================================================//
 function меню() {
     const images = [
-        "https://files.catbox.moe/gvcjfh.jpg",
-        "https://files.catbox.moe/gvcjfh.jpg"
+        "https://files.catbox.moe/lbah5r.jpg",
+        "https://files.catbox.moe/lbah5r.jpg"
     ];
     
     if (sentImages.size >= images.length) {
@@ -103,8 +103,8 @@ function меню() {
 
 function bugimg() {
     const images = [
-        "https://files.catbox.moe/gvcjfh.jpg",
-        "https://files.catbox.moe/gvcjfh.jpg"
+        "https://files.catbox.moe/lbah5r.jpg",
+        "https://files.catbox.moe/lbah5r.jpg"
     ];
     
     if (sentImages.size >= images.length) {
